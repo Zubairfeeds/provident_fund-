@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include provident_fund *.css
+recursive-include provident_fund *.csv
+recursive-include provident_fund *.html
+recursive-include provident_fund *.ico
+recursive-include provident_fund *.js
+recursive-include provident_fund *.json
+recursive-include provident_fund *.md
+recursive-include provident_fund *.png
+recursive-include provident_fund *.py
+recursive-include provident_fund *.svg
+recursive-include provident_fund *.txt
+recursive-exclude provident_fund *.pyc

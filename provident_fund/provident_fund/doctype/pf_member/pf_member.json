@@ -1,0 +1,385 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-07-11 14:26:35.774013",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_details_tab",
+  "naming_series",
+  "column_break_afvdi",
+  "employee_number",
+  "employee",
+  "basic_information",
+  "first_name",
+  "full_name",
+  "father_name",
+  "column_break_9",
+  "middle_name",
+  "gender",
+  "status",
+  "column_break1",
+  "last_name",
+  "cell_number",
+  "image",
+  "employment_details",
+  "final_confirmation_date",
+  "col_break_22",
+  "date_of_joining",
+  "column_break_m6vqo",
+  "date_of_retirement",
+  "provident_fund_details_section",
+  "yes",
+  "provident_fund_number",
+  "column_break_8iiyt",
+  "monthly_contribution",
+  "contribution_start_date",
+  "company_details_section",
+  "company",
+  "branch",
+  "column_break_25",
+  "department",
+  "reports_to",
+  "column_break_18",
+  "designation",
+  "salary_information",
+  "salary_currency",
+  "connections_tab"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Overview"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "oldfieldname": "naming_series",
+   "oldfieldtype": "Select",
+   "options": "PF-.EMP.-.#####",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_afvdi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employee_number",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_standard_filter": 1,
+   "label": "Employee Number",
+   "oldfieldname": "employee_number",
+   "oldfieldtype": "Data",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Employee"
+  },
+  {
+   "fieldname": "basic_information",
+   "fieldtype": "Section Break",
+   "oldfieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "employee_number.first_name",
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fetch_from": "employee_number.employee_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_standard_filter": 1,
+   "label": "Full Name",
+   "oldfieldname": "employee_name",
+   "oldfieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_number.father_name",
+   "fieldname": "father_name",
+   "fieldtype": "Data",
+   "label": "Father Name"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "employee_number.middle_name",
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle Name"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "oldfieldname": "gender",
+   "oldfieldtype": "Select",
+   "options": "Gender",
+   "reqd": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "oldfieldname": "status",
+   "oldfieldtype": "Select",
+   "options": "Active\nInactive\nSuspended\nLeft",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "column_break1",
+   "fieldtype": "Column Break",
+   "width": "50%"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "employee_number.last_name",
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fetch_from": "employee_number.cell_number",
+   "fieldname": "cell_number",
+   "fieldtype": "Data",
+   "label": "Mobile",
+   "options": "Phone"
+  },
+  {
+   "fetch_from": "user_id.user_image",
+   "fetch_if_empty": 1,
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Image",
+   "no_copy": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "employment_details",
+   "fieldtype": "Section Break",
+   "label": "Joining"
+  },
+  {
+   "fetch_from": "employee_number.final_confirmation_date",
+   "fieldname": "final_confirmation_date",
+   "fieldtype": "Date",
+   "label": "Confirmation Date",
+   "oldfieldname": "final_confirmation_date",
+   "oldfieldtype": "Date"
+  },
+  {
+   "fieldname": "col_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_joining",
+   "fieldtype": "Date",
+   "label": "Date of Joining",
+   "oldfieldname": "date_of_joining",
+   "oldfieldtype": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_m6vqo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee_number.date_of_retirement",
+   "fieldname": "date_of_retirement",
+   "fieldtype": "Date",
+   "label": "Date Of Retirement",
+   "oldfieldname": "date_of_retirement",
+   "oldfieldtype": "Date"
+  },
+  {
+   "fieldname": "provident_fund_details_section",
+   "fieldtype": "Section Break",
+   "label": "Provident Fund Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Yes"
+  },
+  {
+   "depends_on": "// eval:doc.yes",
+   "fetch_from": "employee_number.pf_number",
+   "fieldname": "provident_fund_number",
+   "fieldtype": "Data",
+   "label": "Provident Fund Number"
+  },
+  {
+   "fieldname": "column_break_8iiyt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "// eval:doc.yes",
+   "fetch_from": "employee_number.monthly_contribution_h",
+   "fieldname": "monthly_contribution",
+   "fieldtype": "Currency",
+   "label": "Monthly Contribution"
+  },
+  {
+   "depends_on": "eval:doc.yes",
+   "fieldname": "contribution_start_date",
+   "fieldtype": "Date",
+   "label": "Contribution Start Date"
+  },
+  {
+   "fieldname": "company_details_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "oldfieldname": "branch",
+   "oldfieldtype": "Link",
+   "options": "Branch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee_number.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Department",
+   "oldfieldname": "department",
+   "oldfieldtype": "Link",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "employee_number.reports_to",
+   "fieldname": "reports_to",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Reports to",
+   "oldfieldname": "reports_to",
+   "oldfieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee_number.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Designation",
+   "oldfieldname": "designation",
+   "oldfieldtype": "Link",
+   "options": "Designation",
+   "search_index": 1
+  },
+  {
+   "fieldname": "salary_information",
+   "fieldtype": "Section Break",
+   "label": "Salary",
+   "oldfieldtype": "Section Break",
+   "width": "50%"
+  },
+  {
+   "fetch_from": "employee_number.salary_currency",
+   "fieldname": "salary_currency",
+   "fieldtype": "Link",
+   "label": "Salary Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "connections_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connections",
+   "show_dashboard": 1
+  }
+ ],
+ "icon": "fa fa-user",
+ "image_field": "image",
+ "links": [],
+ "modified": "2024-07-19 16:15:57.897501",
+ "modified_by": "Administrator",
+ "module": "Provident Fund",
+ "name": "PF Member",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "set_user_permissions": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "full_name, employee_number",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "full_name"
+}

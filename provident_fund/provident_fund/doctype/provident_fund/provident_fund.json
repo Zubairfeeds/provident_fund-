@@ -1,0 +1,221 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-04-23 13:18:42.580648",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section_break_602tk",
+  "posting_date",
+  "column_break_tbkru",
+  "company",
+  "section_break_5xy1u",
+  "start_date",
+  "payroll_date",
+  "column_break_vhdu1",
+  "end_date",
+  "filter_employees_section",
+  "branch",
+  "department",
+  "column_break_mmcgm",
+  "designation",
+  "profit_margin",
+  "amended_from",
+  "employee_details_section",
+  "pf_employee_details",
+  "section_break_xyuye",
+  "column_break_0uwpc",
+  "grand_total",
+  "section_break_dkk2u",
+  "credit_account",
+  "column_break_0tcmv",
+  "debit_account",
+  "connections_tab"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "PF-.FY.-.#####"
+  },
+  {
+   "fieldname": "section_break_602tk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "column_break_tbkru",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "section_break_5xy1u",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "payroll_date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Payroll Date"
+  },
+  {
+   "fieldname": "column_break_vhdu1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "filter_employees_section",
+   "fieldtype": "Section Break",
+   "label": "Filter Employees"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_mmcgm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "profit_margin",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Profit Margin"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Provident Fund",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee_details_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "fieldname": "section_break_xyuye",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_0uwpc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total"
+  },
+  {
+   "fieldname": "section_break_dkk2u",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "credit_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Credit Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_0tcmv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "debit_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Debit Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "connections_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connections"
+  },
+  {
+   "fieldname": "pf_employee_details",
+   "fieldtype": "Table",
+   "options": "PF Employee Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Journal Entry",
+   "link_fieldname": "reference_name"
+  }
+ ],
+ "modified": "2024-07-23 18:49:12.447064",
+ "modified_by": "Administrator",
+ "module": "Provident Fund",
+ "name": "Provident Fund",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

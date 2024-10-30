@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-23 16:56:18.784594",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pf_member",
+  "full_name",
+  "employee",
+  "employee_name",
+  "employment_type",
+  "pf",
+  "pfcc",
+  "pf_total",
+  "pf_profit",
+  "total",
+  "year_to_date"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "columns": 3,
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "employee.employment_type",
+   "fieldname": "employment_type",
+   "fieldtype": "Data",
+   "label": "Employment type"
+  },
+  {
+   "columns": 1,
+   "fieldname": "pf",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "PF"
+  },
+  {
+   "columns": 1,
+   "fieldname": "pfcc",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "PFCC"
+  },
+  {
+   "columns": 1,
+   "fieldname": "pf_total",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "PF Total"
+  },
+  {
+   "columns": 1,
+   "fieldname": "pf_profit",
+   "fieldtype": "Currency",
+   "in_standard_filter": 1,
+   "label": "PF Profit"
+  },
+  {
+   "columns": 1,
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total"
+  },
+  {
+   "fieldname": "year_to_date",
+   "fieldtype": "Currency",
+   "label": "Year to Date"
+  },
+  {
+   "fetch_from": "employee.pf_number",
+   "fieldname": "pf_member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member",
+   "options": "PF Member"
+  },
+  {
+   "fetch_from": "pf_member.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Member Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-07-25 13:09:09.166033",
+ "modified_by": "Administrator",
+ "module": "Provident Fund",
+ "name": "PF Member Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
